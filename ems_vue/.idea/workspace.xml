@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2ec90cf9-5fb5-452e-97af-eec0db986d03" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Mapper" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\maven\maven-repository" />
+        <option name="mavenHome" value="F:/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="F:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1idJlmZqtk9mgGHMoage36Jx6OK" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/baizhi/mapper" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\ems_vue\src\main\java\com\baizhi\service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\ems_vue\src\main\resources\com\baizhi\mapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="EmsVueApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ems_vue" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baizhi.EmsVueApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ec90cf9-5fb5-452e-97af-eec0db986d03" name="默认更改列表" comment="" />
+      <created>1602231693099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602231693099</updated>
+      <workItem from="1602231702523" duration="8990000" />
+      <workItem from="1602242979928" duration="1549000" />
+      <workItem from="1602289962015" duration="10526000" />
+      <workItem from="1602311364515" duration="12592000" />
+      <workItem from="1602399251387" duration="6179000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="190" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1602404060420">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="190" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602404060420" />
+    <state x="143" y="281" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602316270579">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="143" y="281" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.834@0.0.1536.834" timestamp="1602316270579" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1602413395440">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1602413395440" />
+    <state width="1493" height="213" key="GridCell.Tab.1.center" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state width="1493" height="213" key="GridCell.Tab.1.left" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state width="1493" height="213" key="GridCell.Tab.1.right" timestamp="1602413395439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1602413395439" />
+    <state x="0" y="62" key="SettingsEditor" timestamp="1602318248056">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="0" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1602318248056" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1602244391340">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1602244391340" />
+    <state x="46" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1602322089325">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="46" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1602322089325" />
+  </component>
+</project>

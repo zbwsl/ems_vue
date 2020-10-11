@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加</title>
+</head>
+<body>
+<div id="app">
+    <form>
+        <table cellpadding="0" cellspacing="0" border="0"
+               class="form_table">
+            <tr>
+                <td valign="middle" align="right">
+                    员工名:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="emp.name" >
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    照片:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="file"  class="inputgri" ref="myPhoto">
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    薪资:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="emp.salary" >
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    年龄:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="emp.age" >
+                </td>
+            </tr>
+
+        </table>
+        <p>
+            <input  type="button" @click="add" class="button"  value="提交 &raquo;">
+        </p>
+    </form>
+</div>
+</body>
+</html>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            use:{},
+            emp:{},
+        },
+        methods:{
+            add(){
+                console.log(this.emp);
+                console.log(this.$refs.myPhoto.files[0]);
+                //文件上传必须post enctype必须为multipart/form-data
+                var formData=new FormData();
+                formData.append("name",this.emp.name);
+                formData.append("salary",this.emp.salary);
+                formData.append("age",this.emp.age);
+                formData.append("photo",this.$refs.myPhoto.files[0]);
+                axios({
+                    method:"post",
+                    url:"http://localhost:8989/ems_vue/emp/save",
+                    data:formData,
+                    headers:{
+                        'content-type':'multipart/form-data'
+                    }
+                }).then(res=>{
+                    console.log(res.data);
+                    if(res.data.state){
+                        if(window.confirm(res.data.msg+",点击跳转至列表页面")){
+                            location.href="/ems_vue/emplist.html";
+                        }else {
+                            _this.emp={};
+                        }
+                    }  else {
+                        alert(res.data.msg);
+
+                    }
+                })
+            }
+        },
+        created(){
+            var userString= localStorage.getItem("user");
+            if(userString)
+                this.user=JSON.parse(userString);
+            else {
+                alert("未登录，跳转至登录");
+                location.href = "/ems_vue/login.html";
+            }
+        },
+        mounted(){
+        }
+    })
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<div id="app">
+    <form>
+        <table cellpadding="0" cellspacing="0" border="0"
+               class="form_table">
+            <tr>
+                <td valign="middle" align="right">
+                    用户名:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="user.username" >
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    密码:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="user.password" >
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input  type="button" @click="login" class="button"  value="登录 &raquo;">
+        </p>
+        <p>
+            <input  type="button" @click="tz" class="button"  value="注册 &raquo;">
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            user:{},//保存用户对象
+        },
+
+        methods:{
+           login(){
+               console.log(this.user);
+               //发送登录请求
+               axios.post("http://localhost:8989/ems_vue/user/login",this.user).then(res=>{
+                   console.log(res.data);
+                   if(res.data.state){
+                       alert(res.data.msg+"点击进入主页");
+                       //将用户信息放到localStorage key value
+                       localStorage.setItem("user",JSON.stringify(res.data.user));
+                       location.href="/ems_vue/emplist.html";
+                   }else {
+                       alert(res.data.msg);
+                   }
+               })
+           },
+            tz(){
+                location.href="/ems_vue/regist.html";
+            }
+        },
+        created(){
+        },
+        mounted(){
+        }
+    })
+</script>

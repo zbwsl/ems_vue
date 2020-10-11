@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人员列表</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <div>
+            <div>
+                <p>
+                    <a  href="javascript:;" @click="dj">安全退出</a>
+                </p>
+            </div>
+            <div>
+                <h1>
+                    <a href="#">main</a>
+                </h1>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div>
+            <p>
+
+            </p>
+            <h1>
+                Welcome! {{ user.username }}
+            </h1>
+            <table>
+                <tr>
+                    <td>
+                        ID
+                    </td>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Photo
+                    </td>
+                    <td>
+                        Salary
+                    </td>
+                    <td>
+                        Age
+                    </td>
+                    <td>
+                        Operation
+                    </td>
+                </tr>
+                <tr v-for="(emp,index) in emps" :key="emp.id" >
+                    <td>
+                        {{emp.id}}
+                    </td>
+                    <td>
+                        {{emp.name}}
+                    </td>
+                    <td>
+                        <img :src="'/ems_vue/'+emp.path" style="height: 40px">
+                    </td>
+                    <td>
+                        {{emp.salary}}
+                    </td>
+                    <td>
+                        {{emp.age}}
+                    </td>
+                    <td>
+                        <a href="javascript:;" @click="deleteemp(emp.id)"> delete emp</a>&nbsp;<a :href="'/ems_vue/updateEmp.html?id='+emp.id">update emp</a>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <input type="button" class="button" value="Add Employee" @click="tz" >
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            use:{},
+            emps:[],
+        },
+        methods:{
+            deleteemp(id){
+                _this=this;
+                if(window.confirm("确定要删除")){
+                    axios.get("http://localhost:8989/ems_vue/emp/delete?id="+id).then(res=>{
+                        if(res.data.state){
+                            alert(res.data.msg+"，点击刷新数据");
+                            _this.findAll();
+                        }else {
+                            alert(res.data.msg);
+                        }
+                    });
+                }
+            },
+            tz(){
+                location.href="/ems_vue/addEmp.html";
+            },
+            dj(){
+                localStorage.removeItem("user");
+                location.reload(true);
+            },
+            findAll(){
+                //查询所有员工
+                _this=this;
+                axios.get("http://localhost:8989/ems_vue/emp/findAll").then(res=>{
+                    _this.emps=res.data;
+                })
+            }
+
+        },
+        created(){
+            var userString= localStorage.getItem("user");
+            if(userString)
+                this.user=JSON.parse(userString);
+            else {
+                alert("未登录，跳转至登录");
+                location.href = "/ems_vue/login.html";
+            }
+            this.findAll();
+
+        },
+        mounted(){
+        }
+    })
+</script>

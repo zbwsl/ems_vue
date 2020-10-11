@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<div id="app">
+    <form>
+        <table cellpadding="0" cellspacing="0" border="0"
+            class="form_table">
+            <tr>
+                <td valign="middle" align="right">
+                    用户名:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="user.username" >
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    真实姓名:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="user.realname" >
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    密码:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text" class="inputgri" v-model="user.password" >
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    性别:
+                </td>
+                <td valign="middle" align="left">
+                    男
+                    <input type="radio" class="inputgri" v-model="user.sex" value="m" checked="checked">
+                    女
+                    <input type="radio" class="inputgri" v-model="user.sex" value="f">
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle" align="right">
+                    验证码:
+                </td>
+                <td valign="middle" align="left">
+                    <input type="text"  v-model="code" class="inputgri"  >
+                </td>
+                <td>
+                    <img id="num" :src="url" >
+                    <a href="javascript:;" @click="getsrc" >换一张</a>
+                </td>
+
+            </tr>
+        </table>
+        <p>
+            <input  type="button" @click="register" class="button"  value="Submit &raquo;">
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            url:"",
+            user:{
+                sex:"m"
+            },
+            code:"",
+        },
+
+        methods:{
+            getsrc(){
+                _this = this;
+                axios.get("http://localhost:8989/ems_vue/user/getImage?time="+Math.random()).then(res => {
+                    _this.url = res.data;
+
+                });
+            },
+            //注册
+            register(){
+                axios.post("http://localhost:8989/ems_vue/user/register?code="+this.code,this.user).then(res=>{
+                    console.log(res.data);
+                    if(res.data.state){
+                        alert(res.data.msg+",点击确定跳转至登陆界面!");
+                        location.href="/ems_vue/login.html";
+                    }else {
+                        alert(res.data.msg);
+                    }
+                });
+            },
+        },
+        created(){
+           this.getsrc();
+        },
+        mounted(){
+        }
+    })
+</script>
